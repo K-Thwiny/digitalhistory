@@ -1,0 +1,453 @@
+/*Grid layout for landing page*/
+
+
+body {
+	font-family: "cormorant";
+	font-weight: 500;
+	font-size: 18px;
+	background-color: #F8F8F8;
+	opacity: 1;
+	text-rendering: geometricPrecision;
+
+}
+
+header {
+	font-weight: 700;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+
+
+.gridLayout {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 50px auto 1fr 1fr auto auto;
+	grid-gap: 20px;
+}
+
+#webpageBanner {
+	grid-column: 1/6;
+	grid-row: 1/1; 
+	position: relative;
+	background-color: #0C0481;
+	vertical-align: center;	
+	line-height:  50px;
+	padding-left: 2%;
+	color: #FDFDFD;
+}
+
+.bannerLinks {
+	float: right;
+	margin-right: 40px;
+	margin-top: 5px;
+	font-family: "cormorant";
+	font-weight: 500;
+	font-size: 16px;
+	border: 0;
+	border-radius: 3px;
+	background-color: #0C0481;
+	color: #FDFDFD;
+	height: 40px;
+
+	transition: background-color .3s linear,
+				color .3s linear,
+				opacity .3s linear;
+		
+}
+
+.bannerLinks:hover {
+	background-color:#F8F8F8;
+	color: #0C0481;
+	opacity: 1;
+}
+
+#menuButton {
+	display: none;
+}
+
+/*Modal Window Code*/
+.modalDialog {
+	position: fixed;
+	display: none;
+	top: -10%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.3);
+	z-index: 99999;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity: 1;
+	display: block;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	min-width: 200px;
+	max-width: 600px;
+	min-height: 450px;
+	max-height: auto;
+	position: relative;
+	margin: 10% auto;
+	border-radius: 10px;
+	background: #fff;
+	padding: 2% 2%;
+	
+}
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	font-weight: bold;
+	border-radius: 12px;
+}
+
+.close: hover {
+	background: #00d9ff;
+}
+
+#bioPicture {
+	width:30%;
+	margin-right: 3%;
+	border-radius: 30px;
+	float: left;
+
+}
+
+
+/*End Modal Window code*/
+
+/* Navbar Styling*/
+nav {
+	grid-column:5/6;
+	grid-row: 2/4;
+}
+
+ul {
+	display: block;
+	list-style-type: none;
+}
+
+li {
+	margin: 3px 5px;
+	padding: 5px 5px;
+}
+
+/* Navbar Styling End*/
+
+#togoMapBanner {
+	grid-column: 1/6;
+	grid-row: 2/2;
+	margin-top: -20px;
+	width: 100%;
+	height: auto;
+	border-bottom: 3px solid #0C0481;
+	border-radius: 3px;	
+}
+
+#togoMap {
+	
+}
+
+#exhibitSlavery {
+	grid-column: 2/2;
+	grid-row: 3/3;
+	margin-top: 15px;
+}
+
+#exhibitMissionaries {
+	grid-column: 3/3;
+	grid-row: 3/3;
+	margin-top: 15px;
+}
+
+#exhibitAfricanMissionaries {
+	grid-column: 4/4;
+	grid-row: 3/3;
+	margin-top: 15px;
+}
+
+#exhibitGermanResistance {
+	grid-column: 2/2;
+	grid-row: 4/4;
+}
+
+#exhibitAfricanResistance {
+	grid-column: 3/3;
+	grid-row: 4/4;
+}
+
+#exhibitLessonPlans {
+	grid-column: 4/4;
+	grid-row: 4/4;
+}
+
+#aboutWebsite {
+	grid-column: 2/5;
+	grid-row: 5/6;
+	margin-top: 0%;
+}
+
+.exhibitHighlight {
+
+
+}
+
+.exhibitHighlight:after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 0px; 
+	height: 15px;
+	border-bottom: solid 2px #0C0481;
+
+	transition: all .4s ease-in-out;	
+}
+
+.exhibitHighlight:hover:after {
+	width: 10%;
+}
+
+footer {
+	grid-column: 1/6;
+	grid-row: 6/6;
+	padding-top: 1%;
+	border-radius: 3px;
+	background-color: #1C2833;
+	color: #FDFDFD;
+	width: 100%;	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 20px;
+}
+
+#footerHeader{
+
+	display: flex;
+	min-width: 50%;
+	max-width: 100%;
+	justify-content: center;
+	letter-spacing: 8px;
+	border: 4px outset white;
+/*	border-radius: 50%;
+	padding-bottom: 10px;
+	border-style: */
+}
+
+#footerSections {
+	display: flex;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	align-items: center;
+	width: 50%;
+	justify-content: space-around;
+}
+
+.footerIcons {
+	padding: 1% 2%;
+	font-size: 40px;
+	transform-style: preserve-3d ;
+	transition: .5s linear;
+	color: white;
+}
+
+.footerIcons:hover {
+	transform: rotateY(180deg);
+}
+
+.modalContact {
+	position: fixed;
+	display: none;
+	top: -10%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.3);
+	z-index: 99999;
+	opacity: 0;
+	pointer-events: none;
+	transition: all;
+}
+
+.modalContact:target {
+	opacity: 1;
+	display: block;
+	pointer-events: auto;
+
+}
+
+.modalContact > div {
+	min-width: auto;
+	max-width: 400px;
+	min-height: 400px;
+	max-height: auto;
+	position: relative;
+	margin: 10% auto;
+	border-radius: 10px;
+	background: #fff;
+	padding: 2% 2%;
+}
+
+#nameBox {
+	width: 80%;
+}
+
+#emailBox {
+	width: 80%;
+	margin-top: 1%;
+}
+
+#textBox {
+	margin-top: 1%;
+	width: 79.5%;
+	height: 300px;
+}
+
+
+/*For tablet viewers or small browswer window*/
+@media all and (min-width: 501px) and (max-width: 960px) {
+
+nav {  
+	float:right;
+	display: block;
+
+}
+
+.gridLayout {
+	grid-template-columns: auto;
+}
+
+#webpageBanner {
+	position: relative;
+	height: 100px;
+	background-color: #0C0481;
+	vertical-align: center;	
+	line-height:  50px;
+	padding-left: 2%;
+	color: #FDFDFD;
+}
+
+#menuButton {
+	display: block;
+	float: left;
+	position: fixed;
+}
+
+.hide{
+	display: none;
+}
+
+}
+/*For mobile users*/
+
+@media (min-width: 0px) and (max-width: 500px) {
+
+
+.gridLayout {
+	display: grid;
+	margin: 1%;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-column-gap: 5px;
+}
+
+
+#webpageBanner {
+	position: relative;
+	height: 150px;
+	background-color: #0C0481;
+	vertical-align: center;	
+	line-height:  50px;
+	padding-left: 2%;
+	color: #FDFDFD;
+}
+
+
+
+#menuButton {
+	display: block;
+	position: left;
+}
+
+
+
+.hide{
+	display: none;
+}
+
+.exhibitHighlight {
+	width: 105%;
+}
+
+#exhibitSlavery {
+	grid-column: 1/1;
+	grid-row: auto;
+	float: left;
+	margin-top: 15px;
+}
+
+#exhibitMissionaries {
+	grid-column: 1/1;
+	grid-row: auto;
+	float:left;
+	margin-top: 15px;
+}
+
+#exhibitAfricanMissionaries {
+	grid-column: 1/1;
+	grid-row: auto;
+	margin-top: 15px;
+}
+
+#exhibitGermanResistance {
+	grid-column: 1/1;
+	grid-row: auto;
+}
+
+#exhibitAfricanResistance {
+	grid-column: 1/1;
+	grid-row: auto;
+}
+
+#exhibitLessonPlans {
+	grid-column: 1/1;
+	grid-row: auto;
+}
+
+#aboutWebsite {
+	grid-column: 1/1;
+	grid-row: auto;
+	margin-top: -2%;
+}
+
+footer {
+	grid-column: 1/6;
+	grid-row: auto;
+}
+
+.footerIcons {
+	padding: 5% 15px;
+	font-size: 40px;
+	align-items: center;
+	transform-style: preserve-3d ;
+	transition: .5s linear;
+	color: white;
+}
+
+}
+
