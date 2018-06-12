@@ -21,13 +21,15 @@ a {
 }
 
 
-
-
 .gridLayout {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	grid-template-rows: 50px auto 1fr 1fr auto auto;
 	grid-gap: 20px;
+}
+
+.responsiveMenu {
+	display: none;
 }
 
 #webpageBanner {
@@ -324,7 +326,7 @@ footer {
 
 nav {  
 	float:right;
-	display: block;
+	display: inline-block;
 
 }
 
@@ -334,22 +336,12 @@ nav {
 
 #webpageBanner {
 	position: relative;
-	height: 100px;
+	height: 95px;
 	background-color: #0C0481;
 	vertical-align: center;	
 	line-height:  50px;
 	padding-left: 2%;
 	color: #FDFDFD;
-}
-
-#menuButton {
-	display: block;
-	float: left;
-	position: fixed;
-}
-
-.hide{
-	display: none;
 }
 
 }
@@ -369,25 +361,12 @@ nav {
 
 #webpageBanner {
 	position: relative;
-	height: 150px;
+	height: auto;
 	background-color: #0C0481;
 	vertical-align: center;	
 	line-height:  50px;
 	padding-left: 2%;
 	color: #FDFDFD;
-}
-
-
-
-#menuButton {
-	display: block;
-	position: left;
-}
-
-
-
-.hide{
-	display: none;
 }
 
 .exhibitHighlight {
