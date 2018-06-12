@@ -236,17 +236,28 @@ footer {
 	font-size: 20px;
 }
 
-#footerHeader{
+#footerBlurb {
+	margin: 3% 15%;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: 20px;
+	text-align: center;
+}
 
+footer form {
+	margin-bottom: 2%;
+}
+
+#footerHeader{
+	font-weight: 700;
 	display: flex;
 	min-width: 50%;
 	max-width: 100%;
 	justify-content: center;
 	letter-spacing: 8px;
-	border: 4px outset white;
-/*	border-radius: 50%;
-	padding-bottom: 10px;
-	border-style: */
+	border: 4px white;
+	border-radius: 50%;
+
 }
 
 #footerSections {
@@ -259,7 +270,7 @@ footer {
 }
 
 .footerIcons {
-	padding: 1% 2%;
+	padding: 20% 20%;
 	font-size: 40px;
 	transform-style: preserve-3d ;
 	transition: .5s linear;
