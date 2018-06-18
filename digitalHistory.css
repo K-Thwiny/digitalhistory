@@ -28,9 +28,7 @@ a {
 	grid-gap: 20px;
 }
 
-.responsiveMenu {
-	display: none;
-}
+
 
 #webpageBanner {
 	grid-column: 1/6;
@@ -84,6 +82,7 @@ a {
 	z-index: 99999;
 	opacity: 0;
 	pointer-events: none;
+/*	overflow: auto;*/
 }
 
 .modalDialog:target {
@@ -118,8 +117,10 @@ a {
 	border-radius: 12px;
 }
 
-.close: hover {
-	background: #00d9ff;
+.close:hover {
+	background: #FFFFFF;
+	color: #0C0481;
+	opacity:.9;
 }
 
 #bioPicture {
@@ -130,8 +131,7 @@ a {
 
 }
 
-
-/*End Modal Window code*/
+/*End Modal Window Styling*/
 
 /* Navbar Styling*/
 nav {
@@ -322,7 +322,7 @@ footer form {
 
 #emailBox {
 	width: 80%;
-	margin-top: 1%;
+	margin-top: 5%;
 }
 
 #textBox {
@@ -355,6 +355,16 @@ nav {
 	color: #FDFDFD;
 }
 
+.modalDialog {
+	display: none;
+	top: 3%;
+	margin-top: -5%;
+}
+
+.modalContact {
+	top: 0%;
+}
+
 }
 /*For mobile users*/
 
@@ -380,6 +390,21 @@ nav {
 	color: #FDFDFD;
 }
 
+/*About Me Modal*/
+.modalDialog {
+	top: 0%;
+}
+
+.close {
+	right: -5px;
+}
+
+/*Contact Modal*/
+.modalContact {
+	top: 0%;
+}
+
+/*Exhibit Sections with About Website*/
 .exhibitHighlight {
 	width: 105%;
 }
@@ -425,6 +450,7 @@ nav {
 	margin-top: -2%;
 }
 
+/*Footer*/
 footer {
 	grid-column: 1/6;
 	grid-row: auto;
